@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link href="{% static 'course/css/bootstrap.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    {% block body %}
+    {% endblock body %}
+    <a href="{% url 'add' %}">Add</a>
+    <a href="{% url 'show' %}">Show</a>
+
+    <script src="{% static 'course/js/jquery.js' %}"></script>
+    <script src="{% static 'course/js/popper.js' %}"></script>
+    <script src="{% static 'course/js/bootstrap.js' %}"></script>
+</body>
+</html>

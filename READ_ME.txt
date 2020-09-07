@@ -1,0 +1,1 @@
+This is basic CRUD operation app. Feel free to use anywhere you want.

@@ -1,0 +1,9 @@
+{% extends 'course/base.html' %}
+{% block title %}Update {% endblock title %}
+{% block body %}
+    <form method="POST">
+        {% csrf_token %}
+        {{forms}}
+        <input value="Submit" type="Submit">
+    </form>
+{% endblock body %}

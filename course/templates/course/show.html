@@ -1,0 +1,32 @@
+{% extends 'course/base.html' %}
+{% block title %}Show {% endblock title %}
+{% block body %}
+{% if info %}
+
+<table class="table" border="5">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for st in info %}
+    <tr>
+      <th scope="row">{{st.name}}</th>
+      <td>{{st.email}}</td>
+      <td>{{st.password}}</td>
+      <td><a href="{% url 'delete' st.id %}">Delete</a>  <a  href="{% url 'update' st.id %}">Update Details</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+{% else %}
+    <h1>Your database is Empty</h1>
+{% endif %}
+
+{% endblock body %}
